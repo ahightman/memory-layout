@@ -21,6 +21,7 @@ h1 {
 
 .icon {
   font-family: "memory-icon";
+  padding: 0;
 }
 
 ul {
@@ -42,7 +43,7 @@ ul {
 .game-healthbar {
 display: inline;
 margin-left: 0;
-padding-right: 50%;
+padding-right: 30%;
 }
 
 .game-timer {
@@ -54,12 +55,36 @@ padding-right: 50%;
 
 .game-container {
   margin: 0 auto;
-  width: 98%;
+  width: 100%;
+  max-width: 1200px;
   text-align: center;
-  padding-left: 1em;
 }
 
 .game-box {
+  width: 15%;
+  display: inline-block;
+  padding-top: 16%;
+  position: relative;
+  margin: 0;
+}
+
+.game-box-2 {
+  background-color: #C8F7C5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.game-box-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -30%)
+}
+
+/*.game-box-2 {
   background-color: #C8F7C5;
   box-sizing: border-box;
   width: 16%;
@@ -69,15 +94,16 @@ padding-right: 50%;
   float: left;
   margin: .1em;
   cursor: pointer;
-  overflow: auto;
-  }
+  overflow: hidden;
+  text-align: center;
+  }*/
 
-.game-box-2 {
+/*.game-box-2 {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   margin: 0 auto;
-}
+}*/
 
 
 /*Actions*/
@@ -89,9 +115,17 @@ input {
   display: none;
 }
 
-.game-box [type=checkbox]:checked ~ .game-box-2{
+.game-box [type=checkbox]:not(:checked) + .game-box-2 .icon {
+  opacity: 0;
+  display: none;
+  color: black;
+  font-size: 300%;
+}
+
+
+.game-box [type=checkbox]:checked + .game-box-2 .icon {
   opacity: 1;
-  overflow: visible;
+  display: visible;
   color: black;
   font-size: 300%;
 }
