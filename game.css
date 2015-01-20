@@ -42,7 +42,7 @@ ul {
 .game-healthbar {
 display: inline;
 margin-left: 0;
-padding-right: 50%;
+padding-right: 30%;
 }
 
 .game-timer {
@@ -54,9 +54,9 @@ padding-right: 50%;
 
 .game-container {
   margin: 0 auto;
-  width: 98%;
+  width: 100%;
+  max-width: 1200px;
   text-align: center;
-  padding-left: 1em;
 }
 
 .game-box {
