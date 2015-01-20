@@ -60,7 +60,7 @@ padding-right: 30%;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  /*text-align: center;*/
+  perspective: 1000;
 }
 
 .game-box {
@@ -89,27 +89,6 @@ padding-right: 30%;
   transform: translate(-50%, -50%)
 }
 
-/*.game-box-2 {
-  background-color: #C8F7C5;
-  box-sizing: border-box;
-  width: 16%;
-  padding: 8%;
-  border-radius: .3em;
-  position: relative;
-  float: left;
-  margin: .1em;
-  cursor: pointer;
-  overflow: hidden;
-  text-align: center;
-  }*/
-
-/*.game-box-2 {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  margin: 0 auto;
-}*/
-
 
 /*Actions*/
 
@@ -133,4 +112,67 @@ input {
   display: visible;
   color: black;
   font-size: 300%;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  100% {
+    transform: perspective(400px);
+  }
+}
+
+.game-box [type=checkbox]:checked + .game-box-2 {
+    -webkit-animation-name: flip;
+    -webkit-animation-duration: .4s;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes unflip {
+  0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 20deg);
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 5deg);
+  }
+
+  100% {
+    transform: perspective(400px);
+  }
+}
+.game-box [type=checkbox]:not(:checked) + .game-box-2 {
+    -webkit-animation-name: unflip;
+    -webkit-animation-duration: .4s;
+    -webkit-animation-timing-function: linear;
 }
