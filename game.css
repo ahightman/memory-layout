@@ -11,12 +11,13 @@ body {
   text-align: center;
   margin: 0;
   font-size: 2em;
-  letter-spacing: .5em;
 }
 
 h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5em;
+    letter-spacing: .5em;
+
 }
 
 .icon {
@@ -26,6 +27,8 @@ h1 {
 
 ul {
   list-style-type:none;
+  letter-spacing: .5em;
+
 }
 
 /*Header*/
@@ -57,11 +60,11 @@ padding-right: 30%;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .game-box {
-  width: 15%;
+  width: 16%;
   display: inline-block;
   padding-top: 16%;
   position: relative;
@@ -83,7 +86,7 @@ padding-right: 30%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-45%, -45%)
+  transform: translate(-50%, -50%)
 }
 
 /*.game-box-2 {
