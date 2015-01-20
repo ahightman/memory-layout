@@ -1,0 +1,61 @@
+/*Basic Reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Universal*/
+
+body {
+  background-color: #26A65B;
+  text-align: center;
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: .5em;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  font-family: "memory-icon";
+}
+
+ul {
+  list-style-type:none;
+}
+
+/*Header*/
+
+.game-name {
+  padding-top: 2em;
+}
+
+.start {
+  padding: 1em;
+}
+
+/*Select Game*/
+
+.game-easy, .game-hard {
+  border: .2em solid black;
+  margin: 1em 37%;
+  width: 25%;
+  text-align: center;
+  overflow: hidden;
+  }
+
+.game-easy:hover {
+  background-color: #C8F7C5;
+}
+
+.game-hard:hover {
+  background-color: #C8F7C5;
+}

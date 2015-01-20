@@ -1,0 +1,97 @@
+/*Basic Reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Universal*/
+
+body {
+  background-color: #26A65B;
+  text-align: center;
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: .5em;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+}
+
+.icon {
+  font-family: "memory-icon";
+}
+
+ul {
+  list-style-type:none;
+}
+
+/*Header*/
+
+.header {
+  padding-top: 2em;
+}
+
+.game-statistics {
+  display: inline;
+  padding: .5em;
+  width: 100%
+}
+
+.game-healthbar {
+display: inline;
+margin-left: 0;
+padding-right: 50%;
+}
+
+.game-timer {
+  display: inline;
+  margin-left: 0;
+}
+
+/*Game Board*/
+
+.game-container {
+  margin: 0 auto;
+  width: 98%;
+  text-align: center;
+  padding-left: 1em;
+}
+
+.game-box {
+  background-color: #C8F7C5;
+  box-sizing: border-box;
+  width: 16%;
+  padding: 8%;
+  border-radius: .3em;
+  position: relative;
+  float: left;
+  margin: .1em;
+  cursor: pointer;
+  overflow: auto;
+  }
+
+.game-box-2 {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+
+/*Actions*/
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.game-box [type=checkbox]:checked ~ .game-box-2{
+  opacity: 1;
+  overflow: visible;
+  color: black;
+  font-size: 300%;
+}
