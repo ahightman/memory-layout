@@ -12,6 +12,7 @@ body {
   margin: 0;
   font-size: 2em;
   letter-spacing: .5em;
+  -webkit-transform-perspective: 1000;
 }
 
 h1 {
@@ -49,7 +50,7 @@ ul {
   margin: 1em 37%;
   width: 25%;
   text-align: center;
-  overflow: hidden;
+  /*overflow: hidden;*/
   }
 
 .game-easy:hover {
@@ -59,4 +60,21 @@ ul {
 .game-hard:hover {
   background-color: #C8F7C5;
 }
- 
+
+@-webkit-keyframes skew {
+
+0% 100% {
+    transform: skewX(-10deg);
+}
+
+50% {
+     transform: skewX(10deg);
+}
+}
+
+.new-game-container {
+   -webkit-animation-name: skew;
+   -webkit-animation-timing-funtion: ease-in-out;
+   -webkit-animation-duration: 2s;
+   -webkit-animation-iteration-count: infinite;
+}
